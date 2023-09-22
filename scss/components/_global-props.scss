@@ -1,0 +1,103 @@
+html {
+    font-family: 'Kanit', sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    transition: 0.2s all;
+    color: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.masonry-grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+    .item-cell {
+        flex: 0 1 30%;
+        width: 30%;
+        margin: 0 1.5%;
+        margin-bottom: 28px;
+
+        &:nth-child(1), &:nth-child(2) {
+            flex: 0 1 45%;
+            width: 45%;
+            margin: 0 2.5%;
+        }
+    }
+}
+
+main {
+    background-color: #000000;
+    color: silver;
+
+    .main-content {
+        padding: 60px 0;
+
+        .thumbnail-photo {
+            height: 144px;
+            width: 144px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .bio {
+            margin-bottom: 28px;
+        }
+
+        .links {
+            column-count: 2;
+            width: fit-content;
+            margin: 0 auto;
+
+            .item {
+                margin: 0 8px;
+                margin-bottom: 4px;
+                text-align: left;
+            }
+        }
+
+        .projects {
+            margin-top: 28px;
+
+            .item {
+                overflow: hidden;
+                background-color: transparent;
+                border-radius: 24px;
+                box-shadow: 6px 6px 5px 0px silver;
+                transition: 0.3s all;
+                
+                &:hover {
+                    box-shadow: 0px 0px;
+                    
+                    .preview {
+                        transform: scale(0.8);
+                        box-shadow: 6px 6px 5px 0px silver;
+                        border-radius: 24px;
+                    }
+                }
+
+                .link {
+                    .preview {
+                        aspect-ratio: 1.7;
+                        transition: 0.6s all;
+                    }
+                }
+            }
+        }
+
+        .thank-you {
+            width: 70%;
+            margin: 0 auto;
+            margin-top: 40px;
+        }
+    }
+}
